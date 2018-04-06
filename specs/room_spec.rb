@@ -25,4 +25,8 @@ class RoomTest < MiniTest::Test
     assert_equal("Hampden", @room1.name)
   end
 
+  def test_check_number_guests
+    assert_equal(0, @room1.check_number_of_guests_in_room())
+  end
+
 end #end of class
