@@ -14,4 +14,8 @@ class SongTest < MiniTest::Test
     assert_equal("Ruby", @song1.title)
   end
 
+  def test_artist
+    assert_equal("Kaiser Chiefs", @song1.artist)
+  end
+
 end #end of class

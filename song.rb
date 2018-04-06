@@ -10,4 +10,8 @@ def title
   return @title
 end
 
+def artist
+  return @artist
+end
+
 end #end of class
