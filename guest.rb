@@ -10,4 +10,8 @@ def name()
   return @name
 end
 
+def money
+  return @money
+end
+
 end #end of class
