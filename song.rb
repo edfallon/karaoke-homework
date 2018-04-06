@@ -14,4 +14,8 @@ def artist
   return @artist
 end
 
+def lyrics
+  return @lyrics
+end
+
 end #end of class

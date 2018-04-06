@@ -6,7 +6,7 @@ class SongTest < MiniTest::Test
 
   def setup()
 
-    @song1 = Song.new("Ruby", "Kaiser Chiefs", "Ruby, Ruby, Ruby")#instance of song class
+    @song1 = Song.new("Ruby", "Kaiser Chiefs", "Ruby Ruby Ruby")#instance of song class
 
   end
 
@@ -16,6 +16,10 @@ class SongTest < MiniTest::Test
 
   def test_artist
     assert_equal("Kaiser Chiefs", @song1.artist)
+  end
+
+  def test_lyrics
+    assert_equal("Ruby Ruby Ruby", @song1.lyrics)
   end
 
 end #end of class
