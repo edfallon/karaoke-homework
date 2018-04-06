@@ -17,6 +17,8 @@ class RoomTest < MiniTest::Test
     @guest3 = Guest.new("Emma", 40, "Firework")
     @guest4 = Guest.new("Rob", 50, "My way")
 
+
+
     @song1 = Song.new("Ruby", "Kaiser Chiefs", "Ruby Ruby Ruby")
     @song2 = Song.new("Firework", "Katy Perry", "Baby you're a firework")
   end
@@ -31,6 +33,11 @@ class RoomTest < MiniTest::Test
 
   def test_check_in_guest
     assert_equal(1, @room1.check_in_guest(@guest1))
+  end
+
+  def test_check_out_guest
+    @room1.check_in_guest(@guest1)
+    assert_equal(0, @room1.check_out_guest(@guest1))
   end
 
 end #end of class

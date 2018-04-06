@@ -18,4 +18,9 @@ def check_in_guest(guest)
   return check_number_of_guests_in_room()
 end
 
+def check_out_guest(guest)
+  @guest_array.pop()
+  return check_number_of_guests_in_room()
+end
+
 end #end of class
