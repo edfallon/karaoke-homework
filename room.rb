@@ -28,4 +28,9 @@ def check_number_of_songs()
   return @songs_array.count
 end
 
+def add_songs_to_room(song, song2)
+  @songs_array.push(song, song2)
+  return check_number_of_songs
+end
+
 end #end of class
