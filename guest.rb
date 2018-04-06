@@ -10,8 +10,12 @@ def name()
   return @name
 end
 
-def money
+def money()
   return @money
+end
+
+def favorite_song()
+  return @favorite_song
 end
 
 end #end of class
