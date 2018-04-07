@@ -1,9 +1,10 @@
 class Room
 
-def initialize(name)
+def initialize(name, maximum)
   @name = name
   @guest_array = []
   @songs_array = []
+  @maximum = maximum
 end
 
 def name()
@@ -31,6 +32,10 @@ end
 def add_songs_to_room(song, song2)
   @songs_array.push(song, song2)
   return check_number_of_songs
+end
+
+def maximum()
+  return @maximum
 end
 
 end #end of class
