@@ -10,7 +10,7 @@ class RoomTest < MiniTest::Test
 
   def setup()
 
-    @room1 = Room.new("Hampden", 4)
+    @room1 = Room.new("Hampden", 3)
 
     @guest1 = Guest.new("Ricky", 50, "Ruby Tuesday")
     @guest2 = Guest.new("Jane", 60, "Girls just wanna have fun")
@@ -49,7 +49,14 @@ class RoomTest < MiniTest::Test
   end
 
   def test_maximum_capacity
-    assert_equal(4, @room1.maximum)
+    assert_equal(3, @room1.maximum)
+  end
+
+  def test_maximum_capacity__under
+    @room1.check_in_guest(@guest1)
+    @room1.check_in_guest(@guest2)
+    @room1.check_in_guest(@guest3)
+    assert_equal("Max not exceeded", @room1.do_not_exceed)
   end
 
 end #end of class

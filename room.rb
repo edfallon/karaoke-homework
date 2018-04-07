@@ -38,4 +38,12 @@ def maximum()
   return @maximum
 end
 
+def do_not_exceed()
+  if check_number_of_guests_in_room() <= @maximum
+    return "Max not exceeded"
+  else
+    return "Max exceeded"
+  end
+end
+
 end #end of class
