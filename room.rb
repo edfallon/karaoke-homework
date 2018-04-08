@@ -38,12 +38,25 @@ def maximum()
   return @maximum
 end
 
-def do_not_exceed()
-  if check_number_of_guests_in_room() <= @maximum
-    return "Max not exceeded"
+# def do_not_exceed()
+#   if check_number_of_guests_in_room() <= @maximum
+#     return "Max not exceeded"
+#   else
+#     return "Max exceeded"
+#   end
+# end
+
+def do_not_exceed(guest)
+  if check_number_of_guests_in_room() < @maximum
+     check_in_guest(guest)
+     return check_number_of_guests_in_room()
   else
-    return "Max exceeded"
+    return "Room full"
   end
 end
+#
+# def pay_fee(guest)
+#   return guest.money -= 10
+# end
 
 end #end of class

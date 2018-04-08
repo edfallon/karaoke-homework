@@ -55,16 +55,21 @@ class RoomTest < MiniTest::Test
   def test_maximum_capacity__under
     @room1.check_in_guest(@guest1)
     @room1.check_in_guest(@guest2)
-    @room1.check_in_guest(@guest3)
-    assert_equal("Max not exceeded", @room1.do_not_exceed)
+
+    assert_equal(3, @room1.do_not_exceed(@guest3))
   end
 
   def test_maximum_capacity__over
     @room1.check_in_guest(@guest1)
     @room1.check_in_guest(@guest2)
     @room1.check_in_guest(@guest3)
-    @room1.check_in_guest(@guest4)
-    assert_equal("Max exceeded", @room1.do_not_exceed)
+    assert_equal("Room full", @room1.do_not_exceed(@guest4))
   end
+
+  # def test_pay_fee
+  #   assert_equal(40, pay_fee(@guest1))
+  # end
+
+
 
 end #end of class
