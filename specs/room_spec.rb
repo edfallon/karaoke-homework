@@ -45,7 +45,9 @@ class RoomTest < MiniTest::Test
   end
 
   def test_add_songs_to_room
-    assert_equal(2, @room1.add_songs_to_room(@song1, @song2))
+    @room1.add_songs_to_room(@song1)
+    @room1.add_songs_to_room(@song2)
+    assert_equal(2, @room1.check_number_of_songs())
   end
 
   def test_maximum_capacity

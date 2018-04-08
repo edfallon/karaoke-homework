@@ -29,8 +29,8 @@ def check_number_of_songs()
   return @songs_array.count
 end
 
-def add_songs_to_room(song, song2)
-  @songs_array.push(song, song2)
+def add_songs_to_room(song)
+  @songs_array.push(song)
   return check_number_of_songs
 end
 
@@ -38,13 +38,6 @@ def maximum()
   return @maximum
 end
 
-# def do_not_exceed()
-#   if check_number_of_guests_in_room() <= @maximum
-#     return "Max not exceeded"
-#   else
-#     return "Max exceeded"
-#   end
-# end
 
 def do_not_exceed(guest)
   if check_number_of_guests_in_room() < @maximum
@@ -54,7 +47,7 @@ def do_not_exceed(guest)
     return "Room full"
   end
 end
-#
+
 # def pay_fee(guest)
 #   return guest.money -= 10
 # end
