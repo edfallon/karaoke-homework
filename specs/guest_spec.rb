@@ -21,4 +21,8 @@ class GuestTest < MiniTest::Test
     assert_equal("Ruby Tuesday", @guest1.favorite_song)
   end
 
+  def test_make_payment
+    assert_equal(40, @guest1.make_payment(10))
+  end
+
 end #end of class

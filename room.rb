@@ -48,8 +48,6 @@ def do_not_exceed(guest)
   end
 end
 
-# def pay_fee(guest)
-#   return guest.money -= 10
-# end
+
 
 end #end of class

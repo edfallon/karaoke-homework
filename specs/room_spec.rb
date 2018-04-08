@@ -68,9 +68,7 @@ class RoomTest < MiniTest::Test
     assert_equal("Room full", @room1.do_not_exceed(@guest4))
   end
 
-  # def test_pay_fee
-  #   assert_equal(40, pay_fee(@guest1))
-  # end
+
 
 
 

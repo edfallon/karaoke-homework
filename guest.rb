@@ -18,4 +18,8 @@ def favorite_song()
   return @favorite_song
 end
 
+def make_payment(fee)
+  return @money -= fee
+end
+
 end #end of class
